@@ -282,7 +282,7 @@ namespace app
     static ccf::AuthnPolicies auth_policies()
     {
       ccf::AuthnPolicies policies;
-      policies.push_back(ccf::user_cert_auth_policy);
+      // policies.push_back(ccf::user_cert_auth_policy);
       return policies;
     }
 
@@ -459,59 +459,60 @@ namespace app
 
       if (payload.limit() != 0)
       {
-        return ccf::grpc::make_error<etcdserverpb::RangeResponse>(
-          GRPC_STATUS_FAILED_PRECONDITION,
-          fmt::format("limit {} not yet supported", payload.limit()));
+        // return ccf::grpc::make_error<etcdserverpb::RangeResponse>(
+        //   GRPC_STATUS_FAILED_PRECONDITION,
+        //   fmt::format("limit {} not yet supported", payload.limit()));
       }
       if (payload.sort_order() != etcdserverpb::RangeRequest_SortOrder_NONE)
       {
-        return ccf::grpc::make_error<etcdserverpb::RangeResponse>(
-          GRPC_STATUS_FAILED_PRECONDITION,
-          fmt::format("sort order {} not yet supported", payload.sort_order()));
+        // return ccf::grpc::make_error<etcdserverpb::RangeResponse>(
+        //   GRPC_STATUS_FAILED_PRECONDITION,
+        //   fmt::format("sort order {} not yet supported",
+        //   payload.sort_order()));
       }
       if (payload.keys_only())
       {
-        return ccf::grpc::make_error<etcdserverpb::RangeResponse>(
-          GRPC_STATUS_FAILED_PRECONDITION,
-          fmt::format("keys only not yet supported"));
+        // return ccf::grpc::make_error<etcdserverpb::RangeResponse>(
+        //   GRPC_STATUS_FAILED_PRECONDITION,
+        //   fmt::format("keys only not yet supported"));
       }
       if (payload.count_only())
       {
-        return ccf::grpc::make_error<etcdserverpb::RangeResponse>(
-          GRPC_STATUS_FAILED_PRECONDITION,
-          fmt::format("count only not yet supported"));
+        // return ccf::grpc::make_error<etcdserverpb::RangeResponse>(
+        //   GRPC_STATUS_FAILED_PRECONDITION,
+        //   fmt::format("count only not yet supported"));
       }
       if (payload.min_mod_revision() != 0)
       {
-        return ccf::grpc::make_error<etcdserverpb::RangeResponse>(
-          GRPC_STATUS_FAILED_PRECONDITION,
-          fmt::format(
-            "min mod revision {} not yet supported",
-            payload.min_mod_revision()));
+        // return ccf::grpc::make_error<etcdserverpb::RangeResponse>(
+        //   GRPC_STATUS_FAILED_PRECONDITION,
+        //   fmt::format(
+        //     "min mod revision {} not yet supported",
+        //     payload.min_mod_revision()));
       }
       if (payload.max_mod_revision() != 0)
       {
-        return ccf::grpc::make_error<etcdserverpb::RangeResponse>(
-          GRPC_STATUS_FAILED_PRECONDITION,
-          fmt::format(
-            "max mod revision {} not yet supported",
-            payload.max_mod_revision()));
+        // return ccf::grpc::make_error<etcdserverpb::RangeResponse>(
+        //   GRPC_STATUS_FAILED_PRECONDITION,
+        //   fmt::format(
+        //     "max mod revision {} not yet supported",
+        //     payload.max_mod_revision()));
       }
       if (payload.min_create_revision() != 0)
       {
-        return ccf::grpc::make_error<etcdserverpb::RangeResponse>(
-          GRPC_STATUS_FAILED_PRECONDITION,
-          fmt::format(
-            "min create revision {} not yet supported",
-            payload.min_create_revision()));
+        // return ccf::grpc::make_error<etcdserverpb::RangeResponse>(
+        //   GRPC_STATUS_FAILED_PRECONDITION,
+        //   fmt::format(
+        //     "min create revision {} not yet supported",
+        //     payload.min_create_revision()));
       }
       if (payload.max_create_revision() != 0)
       {
-        return ccf::grpc::make_error<etcdserverpb::RangeResponse>(
-          GRPC_STATUS_FAILED_PRECONDITION,
-          fmt::format(
-            "max create revision {} not yet supported",
-            payload.max_create_revision()));
+        // return ccf::grpc::make_error<etcdserverpb::RangeResponse>(
+        //   GRPC_STATUS_FAILED_PRECONDITION,
+        //   fmt::format(
+        //     "max create revision {} not yet supported",
+        //     payload.max_create_revision()));
       }
 
       auto count = 0;

@@ -27,6 +27,15 @@
           "commitHash": "2fe2dd32b3827eeeeb3959aff63a6b402aab0a5a"
         }
       }
+    },
+    {
+      "component": {
+        "type": "git",
+        "git": {
+          "repositoryUrl": "https://github.com/kubernetes/kubernetes",
+          "commitHash": "b46a3f887ca979b1a5d14fd39cb1af43e7e5d12d"
+        }
+      }
     }
   ],
   "Version": 1
